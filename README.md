@@ -25,8 +25,11 @@ Fork 完成后，你的仓库中会多出一个 `zju-health-report` 项目。进
 1. 用浏览器访问：<https://healthreport.zju.edu.cn/ncov/wap/default/index>。
 2. 如果你已经登录了浙大统一身份认证系统，那么你可以直接看到打卡页面，否则需要先登录，登录后会跳转到打卡页面。
 3. 点击地址栏前面的 🔒 图标，选择 `Cookie`：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/03.png)
+
 4. 在弹框中选择 `healthreport.zju.edu.cn`、`Cookie`、`eai-sess`，复制 Cookie 内容，即红框中的内容：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/04.png)
 
 ### 3. 配置 GitHub Secrets（必须）
@@ -78,17 +81,24 @@ on:
 
 1. 打开电脑版钉钉，创建一个只有你自己的群。
 2. 点击 `群设置`，选择 `智能群助手`，点击 `添加机器人`，选择 `自定义机器人`：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/11.png)
+
 3. 机器人名字随意，选择 `自定义关键词`，填写 `填报`，点击 `完成`：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/12.png)
+
 4. 在 `Webhook` 中，复制 `access_token=` 后面的内容，即红框中的内容：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/13.png)
+
 5. 在项目中，点击 `Settings`，选择左侧的 `Secrets`、`Actions`，点击 `New repository secret`，添加一条名为 `DINGTALK_TOKEN` 的 `Secret`，`Value` 为刚刚复制的内容，点击 `Add secret`：
+
   ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/14.png)
 
 每次 GitHub Actions 运行，都会向钉钉群发送打卡结果：
 
-
+![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/15.png)
 
 ## 说明
 
