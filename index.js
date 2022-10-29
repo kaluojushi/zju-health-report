@@ -77,25 +77,16 @@ function getParams(obj) {
 async function main() {
   try {
     if (!cookie) {
-      if (dingtalk) {
-        await dingtalkNotify("请填写 Cookie");
-      }
       throw new Error("请填写 Cookie");
     }
     const html = await get("index");
     const defExec = /var def = ({.+?});\n/.exec(html);
     if (!defExec) {
-      if (dingtalk) {
-        await dingtalkNotify("请检查 Cookie 是否正确");
-      }
       throw new Error("请检查 Cookie 是否正确");
     }
     const def = defExec[1];
     const oldInfoExec = /oldInfo: ({.+?}),\n/.exec(html);
     if (!oldInfoExec) {
-      if (dingtalk) {
-        await dingtalkNotify("请先手动打卡一次");
-      }
       throw new Error("请先手动打卡一次");
     }
     const oldInfo = oldInfoExec[1];
@@ -113,7 +104,9 @@ async function main() {
     }
   } catch (e) {
     console.log(e);
-    await dingtalkNotify(`${e}`);
+    if (dingtalk) {
+      await dingtalkNotify(`${e}`);
+    }
   }
 }
 
