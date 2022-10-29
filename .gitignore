@@ -1,0 +1,11 @@
+# 关于 project
+package-lock.json
+
+# Editor directories and files
+.vscode
+.vs
+.idea
+
+# node_modules
+node_modules
+*/node_modules/

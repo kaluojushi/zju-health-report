@@ -1,0 +1,28 @@
+name: report
+
+on:
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: '10 16 * * *' # 每天 0 点 10 分触发
+    # 这里表示每天的 UTC 16:10 （即北京时间 0:10）触发
+    # 具体的时间格式可以参考这里：https://crontab.guru/
+
+jobs:
+  report:
+    runs-on: ubuntu-latest # 运行在虚拟机环境 ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x] # nodejs 版本
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1 # 作用：检出仓库，获取源码
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1 # 作用：安装 nodejs
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: health-report
+        run: |
+          npm install
+          node ./index.js ${{ secrets.COOKIE }} ${{ secrets.DINGTALK_TOKEN }}

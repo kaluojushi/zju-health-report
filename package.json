@@ -1,0 +1,30 @@
+{
+  "name": "zju-health-report",
+  "version": "1.0.0",
+  "description": "Automatic health report based on github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaluojushi/zju-health-report.git"
+  },
+  "keywords": [
+    "zju",
+    "health",
+    "report",
+    "auto",
+    "actions",
+    "workflow"
+  ],
+  "author": "Carlo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaluojushi/zju-health-report/issues"
+  },
+  "homepage": "https://github.com/kaluojushi/zju-health-report#readme",
+  "devDependencies": {
+    "axios": "^1.1.3"
+  }
+}
