@@ -46,6 +46,8 @@ Fork 完成后，你的仓库中会多出一个 `zju-health-report` 项目。进
 
 至此，你已经完成了所有必需的配置，可以点击 `Actions`，查看打卡结果。
 
+**如果 Cookie 过期，重复第 2、3 步，重新配置即可。**
+
 ### 4. 配置 GitHub Actions（可选）
 
 GitHub Actions 是 GitHub 提供的自动化服务，可以在指定时间自动运行指定的脚本。
