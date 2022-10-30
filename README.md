@@ -4,6 +4,8 @@
 
 项目地址：[zju-health-report](https://github.com/kaluojushi/zju-health-report)
 
+说明点击 [这里](#说明)
+
 ## 使用方法
 
 首先你需要能登录上 GitHub，并拥有一个 GitHub 账号。
@@ -98,13 +100,21 @@ on:
 
 每次 GitHub Actions 运行，都会向钉钉群发送打卡结果：
 
-![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/15.png)
+![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/16.png)
+
+### 6. 更新项目（推荐）
+
+如果你看到了这个信息，说明项目已经更新了。你可以选择 `Code`、`Sync fork`、`Update branch`，将项目更新到最新版本：
+
+![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/17.png)
 
 ## 说明
 
 - 由于现在的打卡已经不需要验证码了，所以脚本里 **没有配置验证码识别**。
-- 由于 GitHub Actions 有运行时间限制，所以每次打卡的时间可能会有一定的偏差。
+- 每次打卡的时间可能会有一定的偏差，晚几分钟到几十分钟不等。
+  - 学校提示不要在 0 点前后打卡，可能会造成打卡失败。
 - 如果要 **关闭 GitHub Actions**，选择 `Settings`、`Actions`、`General`、`Disable actions`。
+  - 或选择 `Actions`、`report`、`Disable workflow`。
 - 打卡所在地是基于上一次打卡的地点，如果你想修改打卡所在地，可以 **先手动打卡一次**。
 - 脚本是开源的，不存在安全问题，获取 Cookie 是在你自己的仓库中通过 GitHub Secrets 传递的。
 - 如果遇到任何打卡问题，可以提 Issue 或 98 站短联系。
