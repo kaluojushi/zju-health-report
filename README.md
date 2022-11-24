@@ -1,10 +1,16 @@
 # zju-health-report
 
+> 遇到 `Error: 请检查 Cookie 是否正确` 的，请更新项目！——2022.11.24
+
 浙江大学自动打卡（基于 axios），只需 fork 并简单配置即可。
+
+如果项目对你有帮助，欢迎 star ！
 
 项目地址：[zju-health-report](https://github.com/kaluojushi/zju-health-report)
 
-说明点击 [这里](#说明)
+项目说明点击 [这里](#项目说明)
+
+更新说明点击 [这里](#更新说明)
 
 ## 使用方法
 
@@ -44,11 +50,11 @@ Fork 完成后，你的仓库中会多出一个 `zju-health-report` 项目。进
 
 ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/06.png)
 
-至此，你已经完成了所有必需的配置，可以点击 `Actions`，查看打卡结果。
+在 [手动运行](#4.1 手动运行（至少一次）) 一次后，你就完成了所有必需的配置，可以点击 `Actions`，查看打卡结果。
 
 **如果 Cookie 过期，重复第 2、3 步，重新配置即可。**
 
-### 4. 配置 GitHub Actions（可选）
+### 4. 配置 GitHub Actions（推荐）
 
 GitHub Actions 是 GitHub 提供的自动化服务，可以在指定时间自动运行指定的脚本。
 
@@ -56,7 +62,7 @@ GitHub Actions 是 GitHub 提供的自动化服务，可以在指定时间自动
 
 ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/07.png)
 
-#### 4.1 手动运行
+#### 4.1 手动运行（至少一次）
 
 点击 `Actions`，选择左侧的 `report`，点击右侧的 `Run workflow`，即可手动运行打卡脚本：
 
@@ -66,7 +72,7 @@ GitHub Actions 是 GitHub 提供的自动化服务，可以在指定时间自动
 
 ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/09.png)
 
-#### 4.2 定时运行
+#### 4.2 定时运行（可选）
 
 点击 `Code`，打开 `.github/workflows/report.yml`，修改 `cron` 表达式，即可定时运行打卡脚本：
 
@@ -110,7 +116,9 @@ on:
 
 ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/17.png)
 
-## 说明
+每次更新项目，可能需要重新配置一下打卡时间。
+
+## 项目说明
 
 - 由于现在的打卡已经不需要验证码了，所以脚本里 **没有配置验证码识别**。
 - 每次打卡的时间可能会有一定的偏差，晚几分钟到几十分钟不等。
@@ -120,6 +128,11 @@ on:
 - 打卡所在地是基于上一次打卡的地点，如果你想修改打卡所在地，可以 **先手动打卡一次**。
 - 脚本是开源的，不存在安全问题，获取 Cookie 是在你自己的仓库中通过 GitHub Secrets 传递的。
 - 如果遇到任何打卡问题，可以提 Issue 或 98 站短联系。
+
+## 更新说明
+
+- 2021.11.24：锁定 Axios 版本，修复打卡失败（`Error: 请检查 Cookie 是否正确`）的问题。
+- 2021.10.30：发布项目。
 
 ## 原理
 

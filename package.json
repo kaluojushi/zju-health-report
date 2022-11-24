@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/kaluojushi/zju-health-report#readme",
   "devDependencies": {
-    "axios": "^1.1.3"
+    "axios": "1.1.3"
   }
 }
