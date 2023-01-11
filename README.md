@@ -1,5 +1,10 @@
 # zju-health-report
 
+> 由于打卡与蓝码已经不再关联，因此大家可以根据以下步骤关闭 GitHub Actions：
+>> 如果要 **关闭 GitHub Actions**，选择 `Settings`、`Actions`、`General`、`Disable actions`；或选择 `Actions`、`report`、`Disable workflow`。
+> 
+> 本项目代码及说明依然保留，仅供学习使用。——2023.1.11
+
 > 遇到 `Error: 请检查 Cookie 是否正确` 的，请更新项目！——2022.11.24
 
 浙江大学自动打卡（基于 axios），只需 fork 并简单配置即可。
@@ -50,7 +55,7 @@ Fork 完成后，你的仓库中会多出一个 `zju-health-report` 项目。进
 
 ![](https://cdn.jsdelivr.net/gh/kaluojushi/Corecabin-Picbed/img/zju-health-report/06.png)
 
-在 [手动运行](#4.1 手动运行（至少一次）) 一次后，你就完成了所有必需的配置，可以点击 `Actions`，查看打卡结果。
+在 [手动运行](#41-手动运行至少一次) 一次后，你就完成了所有必需的配置，可以点击 `Actions`，查看打卡结果。
 
 **如果 Cookie 过期，重复第 2、3 步，重新配置即可。**
 
@@ -131,8 +136,9 @@ on:
 
 ## 更新说明
 
-- 2021.11.24：锁定 Axios 版本，修复打卡失败（`Error: 请检查 Cookie 是否正确`）的问题。
-- 2021.10.30：发布项目。
+- 2023.1.11：保留代码，但不再维护项目。
+- 2022.11.24：锁定 Axios 版本，修复打卡失败（`Error: 请检查 Cookie 是否正确`）的问题。
+- 2022.10.30：发布项目。
 
 ## 原理
 
